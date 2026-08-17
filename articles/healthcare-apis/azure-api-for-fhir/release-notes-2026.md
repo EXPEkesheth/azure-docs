@@ -20,6 +20,10 @@ ms.author: evach
 Azure API for FHIR&reg; provides a fully managed deployment of the Microsoft FHIR Server for Azure. The server is an implementation of the [FHIR](https://hl7.org/fhir) standard. This document provides details about the features and enhancements made to Azure API for FHIR.
 
 ## August 2026
+### FHIR service
+
+**Microsoft Entra security group support removed for local RBAC**: Assigning data plane access to a Microsoft Entra security group in the **Allowed object IDs** list is no longer supported. Grant access directly to individual users or service principals instead. This change keeps Azure API for FHIR aligned with current security practices and limits the access the service needs to your directory. For more information, see [Configure local RBAC for FHIR](configure-local-rbac.md).
+
 #### Bug fixes:
 
 **Fix for date filtering in bulk delete jobs**: Fixed an issue where the date filter was not correctly applied to bulk delete jobs, which could result in deletions beyond the intended date range.
